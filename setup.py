@@ -26,7 +26,7 @@ else:
        )
     ]
     cmdclass={"build_ext": cpp_extension.BuildExtension}
-    sys.argv.remove("--compile")
+    #sys.argv.remove("--compile")
 
 setup(
     name="lightconvpoint",
