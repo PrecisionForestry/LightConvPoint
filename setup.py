@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from torch.utils import cpp_extension
 import sys
 
@@ -29,7 +29,9 @@ else:
     #sys.argv.remove("--compile")
 
 setup(
-    name="lightconvpoint",
+    version="0.1.0",
+    packages=find_packages(),  # ✅ This line adds all Python modules
     ext_modules=ext_modules,
     cmdclass=cmdclass,
+    include_package_data=True,  # Optional: add this if you want to include config/data files
 )
